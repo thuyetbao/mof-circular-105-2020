@@ -1,0 +1,53 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.8
+    hooks:
+      - id: ruff
+
+  - repo: https://github.com/mxr/sync-pre-commit-deps
+    rev: v0.0.1
+    hooks:
+      - id: sync-pre-commit-deps
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: no-commit-to-branch
+        args: [--branch, "master", --branch, "production"]
+      - id: fix-encoding-pragma
+        args: [--remove]
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: ["--allow-multiple-documents"]
+        exclude: "mkdocs.yaml"
+      - id: check-json
+      - id: check-ast
+      - id: check-added-large-files
+        args: ["--maxkb=10240"] # 10MB
+
+  - repo: https://github.com/hhatto/autopep8
+    rev: v2.2.0
+    hooks:
+      - id: autopep8
+        args: [
+            # For the list: https://github.com/hhatto/autopep8?tab=readme-ov-file#features
+            "--ignore=E501",
+            "--select=E231,E301,E302,E303,E252,W291",
+            # For the selected auto:
+            # E231 - Add missing whitespace.
+            # E301 - Add missing blank line.
+            # E302 - Add missing 2 blank lines.
+            # E303 - Remove extra blank lines.
+            # W291 - Remove trailing whitespace.
+            # E252 - Missing whitespace around parameter equals.
+            "--in-place",
+            "--recursive",
+            "--exclude=venv",
+            # Aggressive level 3 by enable non-whitespace changes; multiple -a result in more aggressive changes
+            "--aggressive",
+            "--aggressive",
+            "--aggressive",
+            "--jobs=4",
+            "mof_circular_105_2020",
+          ]

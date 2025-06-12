@@ -34,7 +34,7 @@ class ResultParseTinFromC105mof(TypedDict):
     detail: DetailVerificationTin
 
 
-def parse_c105mof_tin(obj: str) -> ResultParseTinFromC105mof:
+def parse_tin(obj: str) -> ResultParseTinFromC105mof:
     """Parse information of object about the Tax Identifier Number (TIN) based on Article 5: Circular 105 Ministry of Finance
 
     Structure
@@ -56,8 +56,8 @@ def parse_c105mof_tin(obj: str) -> ResultParseTinFromC105mof:
 
     Usage
     -----
-    >>> from circular_105_mof import parse_c105mof_tin
-    >>> parse_c105mof_tin(obj="0317273020")
+    >>> from mof_circular_105_2020 import parse_tin
+    >>> parse_tin(obj="0317273020")
     {
         'is_valid': True,
         'tin': '0317273020',

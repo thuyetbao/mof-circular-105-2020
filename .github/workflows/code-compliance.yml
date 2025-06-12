@@ -1,0 +1,28 @@
+name: Validate Code Regulation
+
+on:
+  push:
+    paths:
+      - "mof_circular_105_2020/**.py"
+  workflow_dispatch:
+
+jobs:
+  code-regulation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip==24.1.1;
+          python -m pip install --default-timeout=100 $(cat requirements-dev.txt | grep hatch)
+
+      # Include `--output-format=github` to enable automatic inline annotations.
+      - name: Run validate progress
+        run: hatch run ruff check --output-format=github mof_circular_105_2020/;
