@@ -4,4 +4,4 @@
 
 - [x] Supported from Python 3.9 to 3.13
 
-- [x] Updated
+- [x] Updated CICD pipelines: Code Regulation and Test
