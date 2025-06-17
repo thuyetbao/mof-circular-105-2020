@@ -13,12 +13,7 @@ jobs:
     runs-on: ubuntu:22.04
     strategy:
       matrix:
-        python-version: [
-            "3.9",
-            "3.10",
-            "3.11",
-            "3.12",
-          ]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +27,7 @@ jobs:
         run: |
 
           # Install
-          python -m pip install --upgrade pip==24.1.1;
+          python -m pip install --upgrade pip==25.1.1;
           python -m pip install --default-timeout=100 $(cat requirements-dev.txt | grep hatch)
 
       - name: Test package
