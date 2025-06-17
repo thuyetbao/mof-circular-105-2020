@@ -5,16 +5,13 @@ on:
     paths:
       - "mof_circular_105_2020/**"
       - "tests/**"
+      - ".github/workflows/test.yml"
   workflow_dispatch:
 
 jobs:
   test:
-    # Configuration
     runs-on: ubuntu-latest
-
-    # Related to Python not usable in ubuntu:20.04. Upgrade to 22.04.
-    # Ref https://github.com/actions/setup-python/issues/560
-    container: ubuntu:22.04
+    container: ubuntu:24.04
     strategy:
       matrix:
         python-version: [
