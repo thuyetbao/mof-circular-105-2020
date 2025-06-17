@@ -1,14 +1,14 @@
-name: Application - Unit-test
+name: Package - test
 
 on:
   push:
     paths:
       - "mof_circular_105_2020/**"
-      - "tests/unit/**"
+      - "tests/**"
   workflow_dispatch:
 
 jobs:
-  unit-test:
+  test:
     # Configuration
     runs-on: ubuntu-latest
 
@@ -31,16 +31,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          architecture: x64
-          # ref: This has been error by cache - so don't push it
-          # removed related fixed to: https://github.com/bend-n/godot-actions/commit/c5e255a39b21b74a33a47151ae68f2b0f7e391d0
-          # cache: 'pip'
-          # cache-dependency-path: '**/requirements-dev.txt'
 
       - name: Install dependencies
         run: |
 
-          # Install element
+          # Install
           python -m pip install --upgrade pip==24.1.1;
           python -m pip install --default-timeout=100 $(cat requirements-dev.txt | grep hatch)
 
