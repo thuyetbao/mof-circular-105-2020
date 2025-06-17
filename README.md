@@ -45,6 +45,27 @@ Install package by following component
 pip install mof_circular_105_2020
 ```
 
+The core function is to `parse_tin` that parse TIN
+
+```python
+>>> from mof_circular_105_2020 import parse_tin
+>>> parse_tin(obj="0317273020")
+{
+  'is_valid': True,
+  'tin': '0317273020',
+  'entity': 'Independent',
+  'issued_province_id': '03',
+  'detail': {
+    'length': {'code': 'LENGTH', 'status': True, 'metadata': {'value': 10, 'description': 'Length of TIN is (10, 14)'}},
+    'n1n2': {'code': 'N1N2', 'status': True, 'metadata': {'value': '03', 'description': 'Province ID that issued TIN'}},
+    'n3n4n5n6n7n8n9': {'code': 'N3N4N5N6N7N8N9', 'status': True, 'metadata': {'value': '1727302'}},
+    'n10': {'code': 'N10', 'status': True, 'metadata': {'value': '0', 'description': 'Check Digit Number'}},
+    'dash': {'code': 'DASH', 'status': False, 'metadata': {'value': None, 'description': 'The dash seperator'}},
+    'n11n12n13': {'code': 'N11N12N13', 'status': False, 'metadata': {'value': None, 'description': 'Three digits N11N12N13 are formed in ascending order from 001 to 999'}}
+  }
+}
+```
+
 **Documentation**:
 
 Documentaion of this project is deployed at `docs` folder
