@@ -2,7 +2,7 @@
 
 # Global
 import re
-from typing import TypedDict, Literal, Any
+from typing import TypedDict, Literal, Any, Optional
 
 
 class SubNodeMetadata(TypedDict):
@@ -28,9 +28,9 @@ class DetailVerificationTin(TypedDict):
 
 class ResultParseTinFromC105mof(TypedDict):
     is_valid: bool
-    tin: str | None
-    issued_province_id: str | None
-    entity: Literal["Affiliated", "Independent"] | None
+    tin: Optional[str]
+    issued_province_id: Optional[str]
+    entity: Optional[Literal["Affiliated", "Independent"]]
     detail: DetailVerificationTin
 
 
