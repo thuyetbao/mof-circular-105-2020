@@ -35,7 +35,7 @@ class ResultParseTinFromC105mof(TypedDict):
 
 
 def parse_tin(obj: str) -> ResultParseTinFromC105mof:
-    """Parse Taxpayer Identification Number (TIN) based on Article 5 of Circular 105/2020 from Ministry of Finance
+    """Parse Taxpayer Identification Number (TIN) based on Article 5
 
     Structure
     ---------

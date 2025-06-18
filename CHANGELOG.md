@@ -1,6 +1,10 @@
 # Changelog
 
-## v0.5.1 (2025-06-18)
+## v0.5.2 (2025-06-19)
+
+- [x] Updated the README and function documents
+
+## v0.5.1 (2025-06-19)
 
 - [x] Publish `PyPI` package
 

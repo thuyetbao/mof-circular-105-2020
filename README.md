@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/thuyetbao/mof-circular-105-2020.git">
-    <img src="docs/assets/images/banner/colorful-package-banner.png" alt="Package Banner" height="200" width="100%">
+    <img src="https://images.unsplash.com/photo-1614850715973-58c3167b30a0" alt="Package Banner" height="200" width="100%">
   </a>
 </div>
 
@@ -43,7 +43,7 @@
 Install package from PyPI
 
 ```bash
-pip install mof_circular_105_2020
+pip install mof-circular-105-2020
 ```
 
 Use `parse_tin` to parse Taxpayer Identification Number (TIN) based on the circular reference.
