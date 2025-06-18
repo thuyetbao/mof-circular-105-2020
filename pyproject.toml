@@ -174,7 +174,6 @@ source_pkgs = ["mof_circular_105_2020", "tests"]
 branch = true
 parallel = true
 omit = ["mof_circular_105_2020/__init__.py"]
-dependencies = []
 
 [tool.coverage.paths]
 mof_circular_105_2020 = [

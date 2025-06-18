@@ -1,12 +1,5 @@
 #!/bin/python3
 
-# Global
-import sys
-import os
-
-# Append
-sys.path.append(os.path.abspath(os.curdir))
-
 # External
 import pytest
 
