@@ -5,6 +5,7 @@
 # Settings
 SHELL := /bin/bash
 .DEFAULT_GOAL := info
+PACKAGE_FOLDER := mof_circular_105_2020
 
 env:
 	hatch env create
@@ -25,16 +26,13 @@ pre-commit-activate:
 	@pre-commit install;
 
 ruff:
-	@hatch run ruff check .;
+	@hatch run ruff check ${PACKAGE_FOLDER};
 
 build:
 	@hatch build;
 
 test:
 	@hatch run test;
-
-test-unit:
-	hatch run test tests/unit;
 
 docs:
 	@hatch run docs;
@@ -44,8 +42,8 @@ docs-serve:
 
 info:
 	@echo -e "==============================================================================="
-	@echo -e "Application:\t\t\e[34m[MOF] Circular 105/2020\e[0m"
-	@echo -e "On version $$(hatch version)"
+	@echo -e "Package:\t\t\e[34m[MOF] Implement Circular 105/2020\e[0m"
+	@echo -e "On version:\t\t\e[34m$$(hatch version)\e[0m"
 	@echo -e "==============================================================================="
 	@echo -e ""
 	@echo -e "> Supported target ============================================================"
