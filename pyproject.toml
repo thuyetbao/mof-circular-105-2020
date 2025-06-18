@@ -20,6 +20,7 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
 dependencies = []
 
@@ -151,6 +152,7 @@ lint.ignore = [
   "TID252",
   "C419",
   "S110",
+  "UP007",
 ]
 lint.unfixable = [
   # Don't touch unused imports
