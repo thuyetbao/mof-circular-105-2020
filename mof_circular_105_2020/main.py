@@ -2,7 +2,7 @@
 
 # Global
 import re
-from typing import TypedDict, Literal, Any
+from typing import TypedDict, Literal, Any, Optional
 
 
 class SubNodeMetadata(TypedDict):
@@ -28,14 +28,14 @@ class DetailVerificationTin(TypedDict):
 
 class ResultParseTinFromC105mof(TypedDict):
     is_valid: bool
-    tin: str | None
-    issued_province_id: str | None
-    entity: Literal["Affiliated", "Independent"] | None
+    tin: Optional[str]
+    issued_province_id: Optional[str]
+    entity: Optional[Literal["Affiliated", "Independent"]]
     detail: DetailVerificationTin
 
 
 def parse_tin(obj: str) -> ResultParseTinFromC105mof:
-    """Parse information of object about the Tax Identifier Number (TIN) based on Article 5: Circular 105 Ministry of Finance
+    """Parse Taxpayer Identification Number (TIN) based on Article 5 of Circular 105/2020 from Ministry of Finance
 
     Structure
     ---------
@@ -164,9 +164,8 @@ def parse_tin(obj: str) -> ResultParseTinFromC105mof:
 
     # Handle
     node_validate = [node_length, node_n1n2, node_n3n4n5n6n7n8n9, node_n10]
-    match len(element):
-        case 14:
-            node_validate = node_validate + [node_dash, node_n11n12n13]
+    if len(element) == 14:
+        node_validate = [*node_validate, node_dash, node_n11n12n13]
 
     # Valid
     result["is_valid"] = all([node["status"] is True for node in node_validate if node["metadata"]["value"] is not None])
@@ -186,10 +185,9 @@ def parse_tin(obj: str) -> ResultParseTinFromC105mof:
         result["issued_province_id"] = node_n1n2["metadata"]["value"]
 
         # Pack Entity
-        match len(element):
-            case 10:
-                result["entity"] = "Independent"
-            case 14:
-                result["entity"] = "Affiliated"
+        if len(element) == 10:
+            result["entity"] = "Independent"
+        elif len(element) == 14:
+            result["entity"] = "Affiliated"
 
     return result

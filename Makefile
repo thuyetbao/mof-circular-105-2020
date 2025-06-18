@@ -25,7 +25,7 @@ pre-commit-activate:
 	@pre-commit install;
 
 ruff:
-	@ruff check .;
+	@hatch run ruff check .;
 
 build:
 	@hatch build;
@@ -35,9 +35,6 @@ test:
 
 test-unit:
 	hatch run test tests/unit;
-
-ruff:
-	@hatch run ruff check .;
 
 docs:
 	@hatch run docs;
