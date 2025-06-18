@@ -4,11 +4,11 @@ on:
   push:
     paths:
       - "mof_circular_105_2020/**.py"
-      - ".github/workflows/code-compliance.yml"
+      - ".github/workflows/compliance.yml"
   workflow_dispatch:
 
 jobs:
-  code-regulation:
+  compliance:
     runs-on: ubuntu-22.04
 
     steps:
