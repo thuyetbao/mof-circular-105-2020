@@ -10,7 +10,7 @@
 
 <div align="center">
   <a href="https://github.com/thuyetbao/mof-circular-105-2020.git" target="_blank">
-    <img src="https://img.shields.io/badge/project-mof--circular--105--2020--version_0.4.10-darkgreen?logo=c" alt="Package Version">
+    <img src="https://img.shields.io/badge/package-mof--circular--105--2020--version_0.4.10-darkgreen?logo=c" alt="Package Version">
   </a>
 </div>
 
@@ -68,7 +68,7 @@ The core function is to `parse_tin` that parse TIN
 
 **Documentation**:
 
-Documentaion of this project is deployed at `docs` folder
+Documentation of the package is deployed at `docs` folder
 
 **Code Storage**:
 
