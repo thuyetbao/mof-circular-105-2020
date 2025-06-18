@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/thuyetbao/mof-circular-105-2020.git">
-    <!-- <img src="docs/assets/images/banner/background-banner.png" alt="Package Banner" height="300" width="100%"> -->
+    <img src="docs/assets/images/banner/colorful-package-banner.png" alt="Package Banner" height="200" width="100%">
   </a>
 </div>
 
@@ -10,18 +10,21 @@
 
 <div align="center">
   <a href="https://github.com/thuyetbao/mof-circular-105-2020.git" target="_blank">
-    <img src="https://img.shields.io/badge/package-mof--circular--105--2020--version_0.4.10-darkgreen?logo=c" alt="Package Version">
+    <img src="https://img.shields.io/pypi/v/mof_circular_105_2020.svg?logo=pypi" alt="Package Version">
   </a>
 </div>
 
 <div align="center">
   <a href="https://www.python.org/" target="_blank">
-    <img src="https://img.shields.io/badge/python-3.12.8-teal?logo=python" alt="Python 3.12">
+    <img src="https://img.shields.io/pypi/pyversions/mof_circular_105_2020.svg?logo=python" alt="Supported Python Version">
   </a>
+  <br>
   <a href="https://pre-commit.com/" target="_blank">
     <img src="https://img.shields.io/badge/pre--commit-enabled-teal?logo=pre-commit" alt="pre-commit enabled">
   </a>
-  <br>
+  <a href="https://pre-commit.com/" target="_blank">
+    <img src="https://img.shields.io/badge/pep8-enabled-teal?logo=python" alt="pep8 enabled">
+  </a>
   <a href="https://github.com/features/actions" target="_blank">
     <img src="https://img.shields.io/badge/cicd-github--action-teal?logo=github-actions" alt="Github Action">
   </a>
@@ -29,23 +32,21 @@
 
 ---
 
-**mof-circular-105-2020** is the implement of [Circular 105/2020/TT-BTC [Hanoi, December 03, 2020]](https://thuvienphapluat.vn/van-ban/Thuong-mai/Circular-105-2020-TT-BTC-guiding-the-implementation-of-Decision-27-2020-QD-TTg-433301.aspx#tab2)
+## **Features**
 
-**Feature**:
+- Provides function implementations based on [Circular 105/2020/TT-BTC [Hanoi, December 03, 2020]](https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-105-2020-TT-BTC-huong-dan-dang-ky-thue-459433.aspx)
 
-- Reusable models related concepts of financial product in financial markets
-
-- Native support of Python
+- Native Python support
 
 ## **Usage**
 
-Install package by following component
+Install package from PyPI
 
 ```bash
 pip install mof_circular_105_2020
 ```
 
-The core function is to `parse_tin` that parse TIN
+Use `parse_tin` to parse Taxpayer Identification Number (TIN) based on the circular reference.
 
 ```python
 >>> from mof_circular_105_2020 import parse_tin
@@ -66,22 +67,18 @@ The core function is to `parse_tin` that parse TIN
 }
 ```
 
-**Documentation**:
+**Documentation**: //
 
-Documentation of the package is deployed at `docs` folder
+<!-- Documentation of the package is deployed at `docs` folder -->
 
 **Code Storage**:
 
-Repository: [GitHub > Repository `mof-circular-105-2020`](https://github.com/thuyetbao/mof-circular-105-2020)
+Repository: [GitHub > Repository:`mof-circular-105-2020`](https://github.com/thuyetbao/mof-circular-105-2020)
 
 **Releases**:
 
-Releases: [GitHub > Repository > `mof-circular-105-2020` > Releases](https://github.com/thuyetbao/mof-circular-105-2020/releases)
+Releases: [GitHub > Repository:`mof-circular-105-2020` > Releases](https://github.com/thuyetbao/mof-circular-105-2020/releases)
 
-<!-- Bundle URL -->
+**PyPI**:
 
-<!--
-
-| [![PEP8][badges-pep8]](https://peps.python.org/pep-0008/)                                |
-| [![httpx][badges-httpx]](https://www.python-httpx.org/)                                  |
-[badges-pep8]: https://img.shields.io/badge/pep8-compliance-brightgreen -->
+Distribution: [PyPI > Project > `mof-circular-105-2020`](https://pypi.org/project/mof-circular-105-2020/)

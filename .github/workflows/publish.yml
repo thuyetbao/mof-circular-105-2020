@@ -1,7 +1,6 @@
-name: Publish package to PyPi
+name: Publish package to PyPI
 
 on:
-  push:
   release:
     types:
       - created

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.1 (2025-06-18)
+
+- [x] Publish `PyPI` package
+
 ## v0.4.10 (2025-06-18)
 
 - [x] Fixed `runs-on` tag in CICD pipeline
